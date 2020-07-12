@@ -1,9 +1,29 @@
 
 #!/bin/bash -x
 
+sort_function(){
+	arr=("${!1}")
+	len=${#arr[@]}
+	#echo "Unsorted Array: "${arr[@]}
+	for ((i = 0; i<len; i++))
+	do
+	    for((j = 0; j<len-i-1; j++))
+	    do
+	        if [ ${arr[j]} -lt  ${arr[$(( $j+1 ))]} ]
+	        then
+	            temp=${arr[j]}
+	            arr[$j]=${arr[$((j+1))]}
+	            arr[$((j+1))]=$temp
+	        fi
+	    done
+	done
+	echo "Sorted Array in descending: "${arr[@]}
+}
+
+
 declare -A arithemtic
 
-echo "Welcome to UC6 -Read values from dictonary to array"
+echo "Welcome to UC8 -Sort values from array"
 read -p "Enter input number 1 " a
 read -p "Enter input number 2 " b
 read -p "Enter input number 3 " c
@@ -34,3 +54,4 @@ do
 	((counter++))
 done
 echo "Values transfered from dictonary to array"
+sort_function array1[@]
