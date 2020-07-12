@@ -3,7 +3,7 @@
 
 declare -A arithemtic
 
-echo "Welcome to UC6 -Read values from dictonary to array"
+echo "Welcome to UC7 -Read values from dictonary to array"
 read -p "Enter input number 1 " a
 read -p "Enter input number 2 " b
 read -p "Enter input number 3 " c
