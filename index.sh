@@ -23,7 +23,9 @@ sort_function(){
 
 declare -A arithemtic
 
+
 echo "Welcome to UC8 -Sort values from array"
+
 read -p "Enter input number 1 " a
 read -p "Enter input number 2 " b
 read -p "Enter input number 3 " c
