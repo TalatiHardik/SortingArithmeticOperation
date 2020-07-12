@@ -3,7 +3,7 @@
 
 declare -A arithemtic
 
-echo "Welcome to UC6 -Store reuslt in dictonary"
+echo "Welcome to UC6 -Read values from dictonary to array"
 read -p "Enter input number 1 " a
 read -p "Enter input number 2 " b
 read -p "Enter input number 3 " c
@@ -25,3 +25,12 @@ echo " $a % $b + $c = $operation4"
 arithmetic["a%b+c"]=$operation4
 
 #echo ${arithmetic[@]}
+
+counter=0
+for key in "${!arithmetic[@]}"
+do
+	array1[$counter]=${arithmetic[$key]}
+	#echo ${array1[$counter]}
+	((counter++))
+done
+echo "Values transfered from dictonary to array"
